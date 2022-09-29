@@ -1,0 +1,29 @@
+table {
+    border: 1px solid grey;
+    background-color: aliceblue;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+tr, th, td {
+    border: 1px solid grey;
+}
+
+th {
+    background-color: skyblue;
+}
+
+.맞춤정보 {
+    background-color: aquamarine;
+    margin: 10px;
+
+}
+
+.이메일수신, .문자수신, .카톡수신 {
+    border-bottom: 1px solid grey;
+    margin: 2px;
+}
+
+span{
+    color: red;
+}

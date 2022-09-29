@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/practice.css">
+</head>
+
+<body>
+    <!-- 제목 -->
+    <div>
+        <div>
+            <h1>회원가입_회원정보 입력</h1>
+        </div>
+        <div>
+            <ul>
+                <li><a href=""></a><a href=""></a><a href=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 절차 설명란 -->
+    <div>
+        <ul>
+            <li>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </li>
+        </ul>
+    </div>
+    <!-- 회원정보입력란 -->
+    <h3>회원정보입력</h3>
+    <p><span>*</span>표시된 항목은 필수입력 항목입니다.</p>
+    <form action="" method="" >
+    <table>
+        <tr>
+            <th>이름</th>
+            <td>조성호</td>
+        </tr>
+        <tr>
+            <th><span>*</span>아이디</th>
+            <td>
+                <input type="text"></input>
+                <input type="button" value="중복확인"><br>
+                <div>영소문자,숫자5~12자</div>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>비밀번호</th>
+            <td>
+                <label for="password"></label>
+                <input type="password" id="password" name="password">
+                <div>영문,숫자,특수문자중 2가지 이상 혼합하여 10~15자로 입력하세요</div>
+                <div>※특수문자는 "~!@#*()_|.만 사용가능합니다</div>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span><label for="checkpwd">비밀번호 확인</label></th>
+            <td>
+
+                <input type="text" id="checkpwd" name="checkpwd">
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>연락처</th>
+            <td>
+                <div>※유선전화와 휴대전화 중 한가지는 입력해주시기 바랍니다.</div>
+                <label for="num">전화번호</label>
+                <select name="num" id="num">
+                    <option value="02">02</option>
+                </select>
+                -
+                <input type="text"style="width:38.8px;height:18.8px;">
+                -
+                <input type="text"style="width:100px;height:18.8px;">
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="email">이메일</label></th>
+            <td>
+                <input type="email" id="email" name="email" placeholder="이메일 입력">
+                @
+                <select name="domain" id="domain" width="50px">
+                    <option value="">직접입력</option>
+                    <option value="google.com">google.com</option>
+                </select>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span><label for="address">주소</label></th>
+            <td>
+                <select name="address" id="address">
+                    <option value="">선택</option>
+                    <option value="서울">서울시</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>정보수신동의</th>
+            <td>
+                <div class="이메일수신">
+                    <label for="getemail">이메일 수신</label>
+                    <input type="radio" name="getemail" value="yes"> yes
+                    <input type="radio" name="getemail" value="no" checked> no
+                </div>
+                <div class="문자수신">
+                    <label for="getSms">SMS 수신</label>
+                    <input type="radio" name="getSms" value="yes"> yes
+                    <input type="radio" name="getSms" value="no" checked> no
+                </div>
+                <div class="카톡수신">
+                    <label for="getkakao">카카오톡 수신</label>
+                    <input type="checkbox" name="getkakao" id="getkakao"> 카카오톡 맞춤정보 사용동의
+                </div>
+                <div>
+                    관악구에서 제공하는 행정정보를 받아보실 수 있습니다.
+                </div>
+                <div class="맞춤정보">
+                    <strong>*카카오톡 맞춤정보 사용동의</strong>
+                    <div>카카오톡 맞춤정보 서비스는 ~하는 서비스 입니다.</div>
+                    <div>(본서비스는 카톡이 있어야 가능합니다.)</div>
+                </div>
+                
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>
