@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블(표)의 작성</title>
+    <style>
+        table {
+            border : 2px solid blue;
+            border-collapse: collapse; /* serparate: 기본값, collapse : 테두리를 간격없이 붙임 */
+            text-align: center;
+        }
+        table thead { 
+            background-color: #f97977;
+        }
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .data3 {
+            background-color: yellow;
+        }
+    
+    </style>
+</head>
+<body>
+    <h2>테이블의 작성</h2>
+    <p>
+        1) 열(column) : 세로줄<br>
+        2) 행(row) : 가로줄 <br>
+        3) 셀(cell) : 실제내용(데이터)이 들어가는 부분
+    </p>
+    <table> <!--border속성보다 css로 처리하는 것이 권장됨-->
+        <caption> 3학년 2반 성적 </caption> <!-- (생략가능)-->
+        <thead> <!--제목-->
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+            </tr>
+        </thead>
+        <tbody> <!--본문-->
+            <tr>
+                <td>조성호</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>임꺽정</td>
+                <td>89</td>
+                <td>79</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table>
+        <caption>표의 셀 합치기</caption>
+        <tr>
+            <th>제목 1</th>
+            <th>제목 2</th>
+            <th>제목 3</th>
+            <th>제목 4</th>
+            <!-- 셀합치기 : rowspan 세로로 합치기 , colspan 가로로 합치기 -->
+        </tr>
+        <tr>
+            <td colspan="3">데이터1</td>
+            <td>데이터2</td>    
+        </tr>
+        <tr>
+            <td rowspan="2">데이터3</td>
+            <td>데이터4</td>  
+            <td>데이터5</td>  
+            <td>데이터6 </td>  
+        </tr>
+        <tr>
+            <td>데이터7</td>
+            <td>데이터8</td>
+            <td>데이터9</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td class="data3"colspan="2" rowspan="2">데이터3</td>
+        </tr>
+        <tr>
+            <td>데이터4</td>
+            <td>데이터5</td>
+        </tr>
+        <tr>
+            <td colspan="2">데이터6</td>
+            <td>데이터7</td>
+            <td>데이터8</td>
+        </tr>
+        <tr>
+            <td>데이터9</td>
+            <td>데이터10</td>
+            <td colspan="2">데이터11</td>
+        </tr>
+    </table>
+</body>
+</html>

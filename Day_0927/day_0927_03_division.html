@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag 정보 (영역 분할 태그)</title>
+</head>
+<body>
+    <div class="content"> <!-- .content start-->
+        <h2>영역 분할 태그</h2>
+        <p>viewport 안에서 공통의 목적을 가지고 요소들을 집합해서 
+            다른 요소들과 구분해서 사용하기 위한 목적</p>
+        
+        <div class="block">  <!-- .block start-->
+            <h4>블럭요소를 이용한 분할</h4>
+            <b>div태그</b>
+            <fieldset>
+                <legend>블럭요소의 특징</legend>
+                <ul>
+                    <li>세로로 쌓인다. 옆에 아무것도 못온다. (줄바꿈이 있다)</li>
+                    <li>border 속성이 있다. (border) </li>
+                    <li>폭과 높이를 적용할 수 있다. (예외 : img)</li>
+                    <li>padding, margin을 적용할 수 있다.</li>
+                    <li>종류: hn,p,div,ul,ol,li,dd,dt,dl...</li>
+                </ul>
+            </fieldset>
+        </div> <!-- .block end-->
+
+        <div class="inline"> <!-- .inline start-->
+            <h4>인라인 요소를 이용한 분할</h4>
+            <b>span 태그</b>
+            <fieldset>
+                <legend>인라인요소의 특징</legend>
+                <ul>
+                    <li>옆으로 쌓인다.</li>
+                    <li> border가 없어 다닥다닥 붙는다. (border) </li>
+                    <li>폭과 높이를 적용할 수 있다. </li>
+                    <li>padding, margin을 적용할 수 없다.</li>
+                    <li>종류: img, span, b, s, u, i, </li>
+                </ul>
+            </fieldset> 
+        </div> <!-- .inline end-->
+
+    </div> <!-- .content end--> 
+</body>
+</html>

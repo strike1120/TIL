@@ -30,3 +30,8 @@ th {
 span{
     color: red;
 }
+
+.phoneNumBox {
+    width:38.8px ;
+    height: 18.8px;
+}
