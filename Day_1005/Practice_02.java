@@ -17,8 +17,10 @@ public class Practice_02 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("what is your id?");
 		name = sc.next();
+
 		System.out.println("input the price");
 		price = sc.nextInt();
+		
 		System.out.println("input cost of the product");
 		cost = sc.nextInt();
 		int margin = price - cost;
