@@ -18,7 +18,7 @@
 
 heap영역에 생성된 데이터는 0으로 초기화 된다.
 
-```jsx
+```java
 double[] dary = new double[5]; //0으로 초기화
 ```
 
