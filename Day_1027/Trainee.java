@@ -1,13 +1,13 @@
 
 public class Trainee {
-	private int id;
+	private int id; //private이 생기면 setter,getter는 무조건 만들어야함
 	private String name;
 	private double java;
 	private double japan;
 	private double basic;
 	private double avg;
 	
-	//기본 생성자 -> 무조건 만들어 놓을 것!!
+	//기본 생성자 -> 무.조.건. 만들어 놓을 것!!
 	public Trainee() {} 
 	
 	//생성자 오버로딩 (오버로딩된 생성자는 여러개의 매개변수를 가질 수 있음
@@ -40,12 +40,21 @@ public class Trainee {
 	
 	public void setJava(double java) {
 		this.java = java;
+		calc();
 	}
 	public void setJapan(double japan) {
 		this.japan =japan;
+		calc();
 	}
 	public void setBasic(double basic) {
 		this.basic = basic;
+		calc();
+	}
+	
+	
+	//3과목의 점수가 수정되면 avg가 바뀌도록 하기 위한 메소드
+	public void calc() {
+		this.avg = this.java*0.4 + this.japan*0.3 + this.basic * 0.3;
 	}
 		
 		
