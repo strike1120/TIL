@@ -15,7 +15,7 @@ public class GymVO {
 		this.usrName = usrName;
 		this.weight = weight;
 		this.height = height;
-		this.bmi = this.weight / (this.height*0.01*this.height*0.01);
+		calcBMI();
 	}
 	public int getUsrId() {
 		return usrId;
@@ -39,6 +39,7 @@ public class GymVO {
 
 	public void setWeight(double weight) {
 		this.weight = weight;
+		calcBMI();
 	}
 
 	public double getHeight() {
@@ -47,11 +48,18 @@ public class GymVO {
 
 	public void setHeight(double height) {
 		this.height = height;
+		calcBMI();
 	}
 	
 	public double getBmi() {
 		return bmi;
 	}
+	
+	public void calcBMI() {
+		this.bmi = this.weight / (this.height*0.01*this.height*0.01);
+	}
+	
+	
 	public String getResult() {
 		if(bmi > 23 ) 
 			result = "위험";
