@@ -1,73 +1,73 @@
-
 public class GymVO {
-	private int usrId; //회원번호
-
-	private String usrName; //회원이름
-	private double weight; //몸무게
-	private double height; //키
-	private double bmi; //체질량 지수
-	private String result; //결과
-
+	private int usrid;
+	private String usrname;
+	private double height;
+	private double weight;
+	private double bmi;
+	private String result;
+	
 	public GymVO() {}
-
-	public GymVO(int usrId, String usrName, double weight, double height) {
-		this.usrId = usrId;
-		this.usrName = usrName;
+	public GymVO(int usrid, String usrname, double height, double weight) {
+		this.usrid = usrid;
+		this.usrname= usrname;
+		this.height = height;
 		this.weight = weight;
+		calcBMI();
+	}
+	public void calcBMI() {
+		this.bmi = this.weight / ((height*0.01)*(height*0.01));
+		calcResult();
+	}
+	public void calcResult() {
+		if(bmi >= 35)      result = "고도비만";
+		else if(bmi >= 30) result = "중도비만";
+		else if(bmi >= 25) result = "경도비만";
+		else if(bmi >= 23) result = "과체중";
+		else if(bmi >= 18.5) result = "정상";
+		else  			   result = "저체중";
+	}
+	// setter, getter
+	public void setUsrid(int usrid) {
+		this.usrid = usrid;
+	}
+	public void setUsrame(String usrname) {
+		this.usrname = usrname;
+	}	
+	public void setHeight(double height) {
 		this.height = height;
 		calcBMI();
 	}
-	public int getUsrId() {
-		return usrId;
+	public void setWeight(double weight) {
+		this.weight = weight;
+		calcBMI();
 	}
-
-	public void setUsrId(int usrId) {
-		this.usrId = usrId;
+	// getter
+	public int getUsrid() {
+		return usrid;
 	}
-
-	public String getUsrName() {
-		return usrName;
-	}
-
-	public void setUsrName(String usrName) {
-		this.usrName = usrName;
+	public String getUsrname() {
+		return usrname;
 	}
 
 	public double getWeight() {
 		return weight;
 	}
-
-	public void setWeight(double weight) {
-		this.weight = weight;
-		calcBMI();
-	}
-
 	public double getHeight() {
 		return height;
 	}
-
-	public void setHeight(double height) {
-		this.height = height;
-		calcBMI();
-	}
-	
-	public double getBmi() {
+	public double getBMI() {
 		return bmi;
 	}
-	
-	public void calcBMI() {
-		this.bmi = this.weight / (this.height*0.01*this.height*0.01);
-	}
-	
-	
 	public String getResult() {
-		if(bmi > 23 ) 
-			result = "위험";
-		else if(18.5 < bmi && bmi < 22.9)
-			result ="정상";
-		else if(bmi < 18.5)
-			result = "저체중";
 		return result;
 	}
-
+	public void output() {
+		System.out.println("* 아이디: " + usrid);
+		System.out.println("* 이름: " + usrname);
+		System.out.printf("* 몸무게: %.2f(kg)%n", weight);
+		System.out.printf("* 키: %.2f(cm)%n", height);
+		System.out.println("* BMI 측정결과: "+ bmi + ", " + result);
+		
+		System.out.printf("당신의 BMI는 %.2f이고 '%s'상태입니다.%n", bmi, result);
+	}
 }
